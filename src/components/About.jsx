@@ -30,7 +30,7 @@ function withGoBears(text) {
   return (
     <>
       {highlightText(text.slice(0, index))}
-      <img className="cal-logo" src="/photos/cal-logo.png" alt="" />
+      <img className="cal-logo" src={`${import.meta.env.BASE_URL}photos/cal-logo.png`} alt="" />
       <span className="go-bears">
         {bearWords.map(({ word, className }, i) => (
           <span key={word} className={className}>

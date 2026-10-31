@@ -28,22 +28,22 @@ function NavBar() {
       </button>
       <div id="nav-panel" className="nav-panel">
       <div className="nav-links">
-        <a className="nav-icon" href="/#intro" aria-label="Home" onClick={() => setOpen(false)}>
+        <a className="nav-icon" href="#intro" aria-label="Home" onClick={() => setOpen(false)}>
           <CiHome />
         </a>
-        <a className="nav-icon" href="/#about" aria-label="About" onClick={() => setOpen(false)}>
+        <a className="nav-icon" href="#about" aria-label="About" onClick={() => setOpen(false)}>
           <CiUser />
         </a>
-        <a className="nav-icon" href="/#experience" aria-label="Experience" onClick={() => setOpen(false)}>
+        <a className="nav-icon" href="#experience" aria-label="Experience" onClick={() => setOpen(false)}>
           <MdWorkOutline />
         </a>
-        <a className="nav-icon" href="/#education" aria-label="Education" onClick={() => setOpen(false)}>
+        <a className="nav-icon" href="#education" aria-label="Education" onClick={() => setOpen(false)}>
           <FaGraduationCap />
         </a>
-        <a className="nav-icon" href="/#courses" aria-label="Course Projects" onClick={() => setOpen(false)}>
+        <a className="nav-icon" href="#courses" aria-label="Course Projects" onClick={() => setOpen(false)}>
           <CiBookmark />
         </a>
-        <a className="nav-icon" href="/#projects" aria-label="Beyond Coursework" onClick={() => setOpen(false)}>
+        <a className="nav-icon" href="#projects" aria-label="Beyond Coursework" onClick={() => setOpen(false)}>
           <TbLogicNot />
         </a>
       </div>

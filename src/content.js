@@ -8,7 +8,7 @@ export const site = {
 export const intro = {
   greeting: 'Hi, my name is',
   blurb: 'I build intelligent systems.',
-  photo: '/photos/zara.png',
+  photo: `${import.meta.env.BASE_URL}photos/zara.png`,
 }
 
 export const about = {
