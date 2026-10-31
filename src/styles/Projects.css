@@ -1,0 +1,60 @@
+#projects .container {
+  max-width: 920px;
+}
+
+#projects .tabs {
+  flex-basis: 11rem;
+}
+
+.course-project {
+  margin-top: 0;
+}
+
+.course-project-name {
+  margin: 0 0 0.35rem;
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.course-project-line {
+  margin: 0 0 0.25rem;
+  color: var(--text);
+  font-weight: 700;
+}
+
+.course-project-meta {
+  margin: 0 0 0.9rem;
+  color: var(--muted);
+  font-style: italic;
+}
+
+.course-project ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.course-project li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.45rem;
+}
+
+.course-project li + li {
+  margin-top: 1rem;
+}
+
+.course-project li svg {
+  flex: none;
+  margin-top: 0.18em;
+  color: var(--accent);
+}
+
+
+.project-link {
+  display: inline-flex;
+  margin-top: 0.75rem;
+  font-size: 1.1rem;
+  text-decoration: none;
+}

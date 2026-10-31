@@ -1,0 +1,48 @@
+.App {
+  min-height: 100vh;
+}
+
+#content {
+  padding-top: 56px;
+}
+
+@media only screen and (max-width: 800px) {
+  #content {
+    padding-top: 80px;
+  }
+
+  #experience,
+  #education,
+  #courses,
+  #projects {
+    font-size: 1rem;
+  }
+
+  #experience .tab-panel h3,
+  #education .tab-panel h3,
+  #courses h3 {
+    font-size: 1.1rem;
+  }
+
+  #experience .tabs,
+  #education .tabs,
+  #courses .tabs,
+  #projects .tabs {
+    flex-basis: auto;
+  }
+}
+
+.site-footer {
+  padding: 1rem 1.5rem 2rem;
+  font-size: 0.50rem;
+  text-align: left;
+}
+
+.site-footer p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.site-footer svg {
+  vertical-align: -0.12em;
+}

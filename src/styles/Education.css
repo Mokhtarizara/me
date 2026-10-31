@@ -1,0 +1,15 @@
+#education .container {
+  max-width: 920px;
+}
+
+#education {
+  font-size: 0.88rem;
+}
+
+#education .tab-panel h3 {
+  font-size: 1.1rem;
+}
+
+#education .tabs {
+  flex-basis: 9.5rem;
+}

@@ -1,0 +1,36 @@
+.about-highlight {
+  color: #94c8d5;
+}
+
+.cal-logo {
+  height: 1.35rem;
+  width: auto;
+  margin-right: 0.4rem;
+  vertical-align: -0.28em;
+}
+
+.go-bears span {
+  text-shadow:
+    0 1px 1px rgba(2, 12, 27, 0.9),
+    0 0 6px rgba(253, 181, 21, 0.55);
+}
+
+.go-bears .bear-blue,
+.go-bears .bear-gold {
+  color: #83bbc9;
+  -webkit-text-stroke: 0.4px #fdb515;
+  paint-order: stroke fill;
+  text-shadow:
+    0 0 1px #002676,
+    0 0 8px rgba(131, 187, 201, 0.85);
+}
+
+.bear-white {
+  color: #ffffff;
+}
+
+@media only screen and (max-width: 800px) {
+  #about p {
+    font-weight: 600;
+  }
+}

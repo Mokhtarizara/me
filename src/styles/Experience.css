@@ -1,0 +1,21 @@
+#experience .container {
+  max-width: 920px;
+}
+
+#experience {
+  font-size: 0.88rem;
+}
+
+#experience .tab-panel h3 {
+  font-size: 1.1rem;
+}
+
+#experience .tabs {
+  flex-basis: 9.5rem;
+}
+
+.job-title {
+  margin: 0 0 0.35rem;
+  color: var(--text);
+  font-weight: 700;
+}

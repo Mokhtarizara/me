@@ -1,0 +1,116 @@
+/* top title bar — always sticky */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1.5rem;
+  background: var(--navy);
+  border-bottom: 1px solid var(--lightest-navy);
+  box-shadow: 0 10px 30px -10px var(--navy-shadow);
+}
+
+.navbar-brand {
+  font-weight: 700;
+  text-decoration: none;
+  margin-right: auto;
+  color: var(--accent);
+}
+
+.nav-links,
+.nav-social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1rem;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: var(--muted);
+}
+
+.navbar a:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+.nav-icon {
+  display: inline-flex;
+  align-items: center;
+  font-size: 1.05rem;
+}
+
+.nav-icon:hover {
+  text-decoration: none;
+}
+
+.nav-links a[aria-label="About"],
+.nav-links a[aria-label="Education"],
+.nav-links a[aria-label="Beyond Coursework"],
+.nav-social a[aria-label="GitHub"] {
+  color: var(--accent);
+}
+
+.nav-panel {
+  display: contents;
+}
+
+.nav-menu {
+  display: none;
+  margin-left: auto;
+  border: none;
+  background: none;
+  color: var(--muted);
+  font-size: 1.35rem;
+  line-height: 1;
+  padding: 0.2rem;
+  cursor: pointer;
+}
+
+.nav-menu:hover {
+  color: var(--accent);
+}
+
+@media only screen and (max-width: 800px) {
+  .navbar {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .navbar-brand {
+    display: block;
+  }
+
+  .nav-menu {
+    display: inline-flex;
+  }
+
+  .nav-panel {
+    display: none;
+    flex-basis: 100%;
+    flex-direction: column;
+    gap: 0.25rem;
+    padding-top: 0.75rem;
+  }
+
+  .navbar.is-open .nav-panel {
+    display: flex;
+  }
+
+  .nav-links {
+    flex-direction: column;
+  }
+
+  .nav-links a {
+    padding: 12px 0;
+  }
+
+  .nav-social {
+    align-self: flex-end;
+  }
+}
