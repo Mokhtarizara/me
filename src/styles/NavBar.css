@@ -15,11 +15,24 @@
   box-shadow: 0 10px 30px -10px var(--navy-shadow);
 }
 
+.navbar-title {
+  display: flex;
+  align-items: baseline;
+  gap: 0.65rem;
+  margin-right: auto;
+  min-width: 0;
+}
+
 .navbar-brand {
   font-weight: 700;
   text-decoration: none;
-  margin-right: auto;
   color: var(--accent);
+}
+
+.navbar-note {
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 400;
 }
 
 .nav-links,
@@ -80,6 +93,15 @@
   .navbar {
     flex-direction: row;
     align-items: center;
+  }
+
+  .navbar-title {
+    gap: 0.4rem;
+  }
+
+  .navbar-note {
+    font-size: 0.65rem;
+    line-height: 1.1;
   }
 
   .navbar-brand {

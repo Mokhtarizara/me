@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { RiCodeSSlashFill } from 'react-icons/ri'
 import { education } from '../content.js'
 import SectionLabel from './SectionLabel.jsx'
 import '../styles/Tabs.css'
@@ -38,6 +39,21 @@ function Education() {
             <h3>{school.school}</h3>
             <p className="tab-time">{school.time}</p>
             <p>Grade: {school.grade}</p>
+            {school.roles?.length ? (
+              <ul className="edu-roles">
+                {school.roles.map((role) => (
+                  <li key={role.title}>
+                    <RiCodeSSlashFill aria-hidden="true" />
+                    <span>
+                      <span className="edu-role-title">{role.title}</span>
+                      {role.detail ? (
+                        <span className="edu-role-detail">{role.detail}</span>
+                      ) : null}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            ) : null}
           </div>
         </div>
       </div>

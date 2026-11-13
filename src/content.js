@@ -30,7 +30,6 @@ export const experience = {
       title: 'Software Engineer Intern',
       place: 'AtomBeam Technologies',
       time: 'Nov 2021 — May 2022',
-      desc: '',
     },
     {
       role: 'Database Engineer & Administrator',
@@ -47,24 +46,57 @@ export const education = {
       degree: 'Bachelor Computer Science',
       time: 'Jun 2024 — Dec 2026',
       grade: '3.6',
+      roles: [
+        {
+          title: 'Hello World Mentor',
+          detail:
+            'Mentored 10 Computer Science and Data Science students in weekly meetings.',
+        },
+        {
+          title: 'Orientation Leader',
+          detail: 'Led a 5-day orientation for 40 incoming students.',
+        },
+        { title: 'CDSS Advisory Board' },
+        {
+          title: 'ISAA Board Member',
+          detail:
+            'Coordinated with other boards and clubs to organize workshop events for the Iranian student community at Berkeley, with 60+ people attending.',
+        },
+      ],
     },
     {
       school: 'De Anza College',
       degree: 'Associate Mathematics',
       time: 'Sep 2021 — May 2024',
       grade: '3.98',
+      roles: [
+        {
+          title: 'Instructional Assistant',
+          detail:
+            'Tutored statistics, assisted labs, graded assignments, and led 15+ review sessions.',
+        },
+        { title: 'Google Developer Student Clubs' },
+      ],
     },
   ],
 }
 
 export const courseProjects = [
   {
-    code: 'CS 61A',
+    code: 'CS 61A – 47A',
     title: 'Structure and Interpretation of Computer Programs',
   },
   {
     code: 'CS 61B',
     title: 'Data Structures',
+  },
+  {
+    code: 'CS 61C',
+    title: 'Great Ideas in Computer Architecture (Machine Structures)',
+  },
+  {
+    code: 'CS 70',
+    title: 'Discrete Mathematics and Probability Theory',
   },
   {
     code: 'CS 160',
@@ -111,12 +143,27 @@ export const courseProjects = [
 
 export const softwareProjects = [
   {
+    id: 'innowi',
+    title: 'Innowi',
+    category: 'AI/LLM Lead',
+    place: 'Claude API, Agentic AI',
+    time: 'Oct 2026 — Present',
+    link: 'https://innowi.com/',
+    linkLabel: 'innowi.com',
+    points: [
+      'Lead AI/LLM engineering for a restaurant intelligence platform, coordinating the memory model, restaurant data, and a Claude question-answering system.',
+      'Build structured memory from a memory plan and entity-relationship model, with restaurant tables in Supabase loaded from sample data.',
+      'Connect the /ask endpoint to Claude and evaluate answers against 10 restaurant-specific questions and their pass criteria.',
+    ],
+  },
+  {
     id: 'kitchenos',
     title: 'KITCHENos',
     category: 'Robotics & Machine Learning',
     place: 'CalHacks',
     time: 'Oct 2025',
     link: 'https://devpost.com/software/kitchenos',
+    linkLabel: 'Devpost',
     points: [
       'Configured and calibrated a four-arm robotic system using SO-101 robotic arms and the Hugging Face LeRobot framework, validating motor IDs, USB communication, baud rates, and hardware responsiveness.',
       'Independently collected and curated 55 teleoperated demonstration episodes, capturing synchronized joint states and visual observations for imitation learning.',

@@ -13,3 +13,34 @@
 #education .tabs {
   flex-basis: 9.5rem;
 }
+
+.edu-roles {
+  margin: 0.9rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.edu-roles li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.45rem;
+}
+
+.edu-roles li + li {
+  margin-top: 0.65rem;
+}
+
+.edu-roles li svg {
+  flex: none;
+  margin-top: 0.18em;
+  color: var(--accent);
+}
+
+.edu-role-title {
+  font-weight: 700;
+}
+
+.edu-role-detail {
+  display: block;
+  margin-top: 0.2rem;
+}

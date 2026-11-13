@@ -38,7 +38,6 @@ function Experience() {
             <p className="job-title">{job.title || job.role}</p>
             <h3>{job.place}</h3>
             <p className="tab-time">{job.time}</p>
-            {job.desc ? <p>{job.desc}</p> : null}
           </div>
         </div>
       </div>

@@ -13,9 +13,12 @@ function NavBar() {
 
   return (
     <nav className={open ? 'navbar is-open' : 'navbar'}>
-      <Link className="navbar-brand" to="/#intro" onClick={() => setOpen(false)}>
-        {site.name}
-      </Link>
+      <div className="navbar-title">
+        <Link className="navbar-brand" to="/#intro" onClick={() => setOpen(false)}>
+          {site.name}
+        </Link>
+        <span className="navbar-note">website is updating</span>
+      </div>
       <button
         type="button"
         className="nav-menu"

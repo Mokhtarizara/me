@@ -58,9 +58,9 @@ function Projects() {
                 href={project.link}
                 target="_blank"
                 rel="noreferrer"
-                aria-label="KITCHENos on Devpost"
+                aria-label={`${project.title} — ${project.linkLabel}`}
               >
-                Devpost
+                {project.linkLabel}
               </a>
             ) : null}
           </article>
