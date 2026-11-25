@@ -13,10 +13,24 @@ function CourseWriteup({ course }) {
     <div className="course-project">
       <p className="course-project-name">{course.title}</p>
       {tech ? <p className="course-project-line">{tech}</p> : null}
-      {course.semester ? <p className="course-project-meta">{course.semester}</p> : null}
+      {course.place || course.semester ? (
+        <p className="course-project-meta">
+          {[course.place, course.semester].filter(Boolean).join(' | ')}
+        </p>
+      ) : null}
       {course.summary ? <p className="course-summary">{course.summary}</p> : null}
       {course.tags?.length ? (
         <p className="course-tags">{course.tags.join(' · ')}</p>
+      ) : null}
+      {course.bullets?.length ? (
+        <ul className="course-notes">
+          {course.bullets.map((point) => (
+            <li key={point}>
+              <RiCodeSSlashFill aria-hidden="true" />
+              <span>{point}</span>
+            </li>
+          ))}
+        </ul>
       ) : null}
       {course.projects?.map((item) => (
         <div className="course-subproject" key={item.title}>

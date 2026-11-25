@@ -253,6 +253,20 @@ export const courseProjects = [
     code: 'CS 189',
     title: 'Introduction to Machine Learning',
   },
+  {
+    code: 'CS 194-196',
+    title: 'CS 194-196 – Agentic AI',
+    place: 'UC Berkeley',
+    semester: 'Spring 2026',
+    summary:
+      'Studied how to build, evaluate, deploy and secure LLM agents, with guest lectures from researchers at OpenAI, NVIDIA, Google DeepMind, Microsoft and Meta.',
+    tags: ['AI Agents', 'Agent Evaluation', 'Multi-Agent Systems', 'AI Safety'],
+    bullets: [
+      'Learned LLM agent foundations: reasoning, planning, tool use, agent frameworks and infrastructure.',
+      'Studied agent evaluation, multi agent systems, real world agent deployment, and agent safety and security.',
+      'Covered agent benchmarks (SWE bench Verified, BrowseComp, τ² Bench), post training of verifiable agents, statistical error bars for LLM evaluations, and agents for code generation, web automation, robotics and scientific discovery.',
+    ],
+  },
 ]
 
 export const softwareProjects = [
