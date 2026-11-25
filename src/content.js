@@ -251,7 +251,42 @@ export const courseProjects = [
   },
   {
     code: 'CS 189',
-    title: 'Introduction to Machine Learning',
+    title: 'CS 189: Introduction to Machine Learning',
+    tech: ['Python', 'PyTorch', 'NumPy', 'scikit learn', 'Hugging Face'],
+    summary:
+      'Built and trained models ranging from classical ML to transformers, tool using LLM agents and diffusion models, implementing core algorithms such as EM, optimizers and attention from scratch.',
+    tags: ['Machine Learning', 'Deep Learning', 'LLMs', 'AI Agents'],
+    projects: [
+      {
+        title: 'Classical ML',
+        bullets: [
+          "Built KNN models on Palmer Penguins with train, validation and test tuning, and implemented k-means (Lloyd's algorithm) and Gaussian mixture models with EM from scratch.",
+          'Applied PCA to congressional voting records and Fashion-MNIST images; built linear regression with basis functions, ridge and lasso, and logistic regression on breast cancer data, evaluated with ROC and precision recall curves.',
+        ],
+      },
+      {
+        title: 'Deep Learning',
+        bullets: [
+          'Implemented gradient descent optimizers from scratch (momentum, AdaGrad, RMSProp, Adam) and a small automatic differentiation engine for backpropagation.',
+          'Built neural networks in PyTorch with batch, layer and RMS normalization, residual connections and dropout; trained CNNs on MNIST and visualized what they learn with saliency and occlusion maps.',
+        ],
+      },
+      {
+        title: 'Transformers & LLMs',
+        bullets: [
+          'Built multi head attention, positional encodings (including RoPE) and a small vision transformer, then a BPE tokenizer and a decoder-only language model trained on Shakespeare.',
+          'Implemented text generation strategies (temperature, top-k, top-p) and speculative decoding with Qwen3 models, and measured KV cache speedups.',
+        ],
+      },
+      {
+        title: 'RL, Agents & Diffusion',
+        bullets: [
+          'Trained policies with REINFORCE and fine tuned a small language model with GRPO against an automated checker.',
+          'Built a tool using LLM agent with Qwen3-1.7B that calls a safe calculator and an embedding based semantic search, parsing JSON tool calls in a loop; analyzed failures where the model hallucinated tool inputs.',
+          'Trained diffusion models, including a U-Net that generates MNIST digits, with classifier free guidance.',
+        ],
+      },
+    ],
   },
   {
     code: 'CS 194-196',
