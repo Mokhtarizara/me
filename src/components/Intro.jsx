@@ -6,7 +6,9 @@ import '../styles/Intro.css'
 const typedName = 'Zahra'
 
 function Intro() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(() =>
+    import.meta.env.SSR ? typedName.length : 0,
+  )
 
   useEffect(() => {
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
@@ -32,8 +34,10 @@ function Intro() {
         </div>
         <div className="intro-copy">
           <p className="intro-greeting">{intro.greeting}</p>
-          <h1 className="intro-name" aria-label={typedName}>
-            <span aria-hidden="true">{typedName.slice(0, count)}</span>
+          <h1 className="intro-name" aria-label={typedName} suppressHydrationWarning>
+            <span aria-hidden="true" suppressHydrationWarning>
+              {typedName.slice(0, count)}
+            </span>
             <span className="intro-caret" aria-hidden="true" />
             <BsThreeDots className="intro-dots" aria-hidden="true" />
           </h1>

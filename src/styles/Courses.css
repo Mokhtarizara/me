@@ -17,3 +17,21 @@
   color: var(--muted);
 }
 
+.course-summary {
+  margin: 0 0 0.55rem;
+}
+
+.course-tags {
+  margin: 0;
+  color: var(--muted);
+  font-style: italic;
+}
+
+.course-subproject {
+  margin-top: 1.35rem;
+}
+
+.course-subproject .course-project-meta {
+  margin-bottom: 0.55rem;
+}
+

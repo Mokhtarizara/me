@@ -6,10 +6,41 @@ import '../styles/Tabs.css'
 import '../styles/Projects.css'
 import '../styles/Courses.css'
 
+function CourseWriteup({ course }) {
+  const tech = course.tech?.filter(Boolean).join(', ')
+
+  return (
+    <div className="course-project">
+      <p className="course-project-name">{course.title}</p>
+      {tech ? <p className="course-project-line">{tech}</p> : null}
+      {course.semester ? <p className="course-project-meta">{course.semester}</p> : null}
+      {course.summary ? <p className="course-summary">{course.summary}</p> : null}
+      {course.tags?.length ? (
+        <p className="course-tags">{course.tags.join(' · ')}</p>
+      ) : null}
+      {course.projects?.map((item) => (
+        <div className="course-subproject" key={item.title}>
+          <p className="course-project-name">{item.title}</p>
+          {item.tech ? <p className="course-project-meta">{item.tech}</p> : null}
+          <ul>
+            {item.bullets.map((point) => (
+              <li key={point}>
+                <RiCodeSSlashFill aria-hidden="true" />
+                <span>{point}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  )
+}
+
 function CourseProjects() {
   const [active, setActive] = useState(0)
   const course = courseProjects[active]
   const project = course.project
+  const hasWriteup = course.summary || course.projects?.length
 
   return (
     <section id="courses" className="section">
@@ -38,7 +69,9 @@ function CourseProjects() {
             id="course-panel"
             aria-labelledby={`course-tab-${active}`}
           >
-            {project ? (
+            {hasWriteup ? (
+              <CourseWriteup course={course} />
+            ) : project ? (
               <div className="course-project">
                 <p className="course-project-name">{project.title}</p>
                 <p className="course-project-line">

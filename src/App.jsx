@@ -15,10 +15,6 @@ function App() {
   const { pathname } = useLocation()
 
   useEffect(() => {
-    document.getElementById('page-loader')?.remove()
-  }, [])
-
-  useEffect(() => {
     window.scrollTo(0, 0)
   }, [pathname])
 

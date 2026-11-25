@@ -62,6 +62,7 @@ export const education = {
           detail:
             'Coordinated with other boards and clubs to organize workshop events for the Iranian student community at Berkeley, with 60+ people attending.',
         },
+        { title: 'MTC Club Member' },
       ],
     },
     {
@@ -97,6 +98,9 @@ export const courseProjects = [
   {
     code: 'CS 70',
     title: 'Discrete Mathematics and Probability Theory',
+    summary:
+      'Mathematical foundations of computer science: proofs, graph theory, modular arithmetic and RSA, error-correcting codes, counting, and probability.',
+    tags: ['Proofs', 'Graph Theory', 'Cryptography Math', 'Probability'],
   },
   {
     code: 'CS 160',
@@ -118,10 +122,72 @@ export const courseProjects = [
   {
     code: 'CS 161',
     title: 'Computer Security',
+    tech: ['Go', 'C', 'Python', 'GDB'],
+    semester: 'Spring 2026',
+    summary:
+      'Exploited memory-safety and web vulnerabilities, and built an end-to-end encrypted file-sharing system secure against a malicious server.',
+    tags: ['Applied Cryptography', 'Memory Safety', 'Web Security', 'Secure Design'],
+    projects: [
+      {
+        title: 'Exploiting Memory-Safety Vulnerabilities',
+        tech: 'C, Python, GDB',
+        bullets: [
+          'Exploited buffer overflows, an off-by-one bug, format string bugs, and a TOCTOU race in vulnerable C programs.',
+          'Bypassed stack canaries and ASLR by analyzing program memory with GDB.',
+        ],
+      },
+      {
+        title: 'End-to-End Encrypted File Sharing',
+        tech: 'Go',
+        bullets: [
+          'Designed and built a file-sharing client that keeps files confidential and tamper-evident on an untrusted server, with login, sharing, and cascading revocation.',
+          'Used AES-CTR, HMAC-SHA-512, RSA-OAEP, RSA signatures, and Argon2/HKDF; wrote a design document and a test suite.',
+        ],
+      },
+      {
+        title: 'Web Security',
+        tech: 'HTTP, SQL, JavaScript',
+        bullets: [
+          'Exploited SQL injection (including through a session cookie), stored and reflected XSS, and path traversal in a vulnerable web app.',
+          'Found broken access control, leaked credentials in source code, and password reuse, and learned the defenses for each.',
+        ],
+      },
+    ],
   },
   {
     code: 'CS 168',
     title: 'Introduction to the Internet: Architecture and Protocols',
+    tech: ['Python'],
+    semester: 'Spring 2026',
+    summary:
+      'Built core Internet protocols from scratch: a traceroute tool, a distance-vector router, and a reliable TCP-style transport layer.',
+    tags: ['Networking', 'TCP/IP', 'Routing', 'Fault Tolerance'],
+    projects: [
+      {
+        title: 'Traceroute',
+        tech: 'Python',
+        bullets: [
+          'Built a traceroute tool using UDP probes and ICMP Time Exceeded replies to discover the routers along a network path.',
+          'Made it robust to lost, duplicated, delayed, and malformed packets, silent routers, and routing loops.',
+        ],
+      },
+      {
+        title: 'Distance-Vector Routing',
+        tech: 'Python',
+        bullets: [
+          'Implemented a RIP-style router that learns routes with Bellman-Ford updates and forwards packets between ports.',
+          'Added split horizon, poison reverse, route expiration, triggered updates, and recovery from link failures.',
+        ],
+      },
+      {
+        title: 'Transport (TCP)',
+        tech: 'Python',
+        bullets: [
+          'Implemented a subset of TCP: three-way handshake, out-of-order reassembly, and sliding-window flow control.',
+          'Added connection teardown, retransmission, and RTT-based timeout estimation following RFC 6298.',
+        ],
+      },
+    ],
   },
   {
     code: 'CS 180',
@@ -134,6 +200,53 @@ export const courseProjects = [
   {
     code: 'CS 188',
     title: 'Introduction to Artificial Intelligence',
+    tech: ['Python', 'PyTorch', 'NumPy'],
+    semester: 'Spring 2026',
+    summary:
+      'Built search, game playing, reinforcement learning, probabilistic inference, and neural network agents for Pac Man.',
+    tags: ['Search', 'Reinforcement Learning', 'Bayes Nets', 'Neural Networks'],
+    projects: [
+      {
+        title: 'Search',
+        tech: 'Python',
+        bullets: [
+          'Implemented depth first, breadth first, uniform cost, and A* graph search to guide Pac Man through mazes.',
+          'Designed consistent heuristics for the corners and food collection problems that reduce the number of states searched.',
+        ],
+      },
+      {
+        title: 'Multi-Agent Search',
+        tech: 'Python',
+        bullets: [
+          'Built minimax, alpha beta pruning, and expectimax agents that plan against multiple ghost opponents.',
+          'Wrote an evaluation function that scores game states so Pac Man wins reliably and quickly.',
+        ],
+      },
+      {
+        title: 'Reinforcement Learning',
+        tech: 'Python',
+        bullets: [
+          'Implemented value iteration for decision making under uncertainty and tuned discount, noise, and reward settings to produce target behaviors.',
+          'Built Q-learning with epsilon greedy exploration and approximate Q-learning with feature weights that scales to larger layouts.',
+        ],
+      },
+      {
+        title: 'Ghostbusters (Bayes Nets & HMMs)',
+        tech: 'Python',
+        bullets: [
+          'Built Bayes net inference: joining factors, eliminating variables, and answering probability queries with variable elimination.',
+          'Tracked hidden ghosts from noisy distance sensors using exact inference and a particle filter with weighting and resampling.',
+        ],
+      },
+      {
+        title: 'Machine Learning',
+        tech: 'Python, PyTorch',
+        bullets: [
+          'Built a perceptron, a neural network that approximates sin(x), and a multi layer network for MNIST digit classification.',
+          "Built an RNN that identifies a word's language one character at a time, a CNN on a from-scratch convolution, and a causal self attention block.",
+        ],
+      },
+    ],
   },
   {
     code: 'CS 189',
@@ -145,15 +258,17 @@ export const softwareProjects = [
   {
     id: 'innowi',
     title: 'Innowi',
-    category: 'AI/LLM Lead',
-    place: 'Claude API, Agentic AI',
+    category: 'AI/LLM Lead – Restaurant AI Agent (Claude API, Agentic AI)',
+    place: 'Industry-Sponsored Student Project',
     time: 'Oct 2026 — Present',
     link: 'https://innowi.com/',
     linkLabel: 'innowi.com',
     points: [
-      'Lead AI/LLM engineering for a restaurant intelligence platform, coordinating the memory model, restaurant data, and a Claude question-answering system.',
-      'Build structured memory from a memory plan and entity-relationship model, with restaurant tables in Supabase loaded from sample data.',
-      'Connect the /ask endpoint to Claude and evaluate answers against 10 restaurant-specific questions and their pass criteria.',
+      'Lead a 5-person AI/LLM team building a Claude-powered AI agent for non-reservation restaurants.',
+      'Met with randomly selected busy and quiet restaurants across SF and Berkeley to define unbiased requirements.',
+      'Build structured agent memory from an entity-relationship model, with restaurant tables in Supabase.',
+      'Design the agent’s 6 Claude tool-calling functions (sales, top sellers, staff, reviews) behind an /ask API endpoint.',
+      'Evaluate the agent on 10 owner questions with strict pass rules: exact numbers and zero hallucinated information.',
     ],
   },
   {
