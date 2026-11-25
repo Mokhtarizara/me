@@ -73,12 +73,12 @@ function CourseProjects() {
               <CourseWriteup course={course} />
             ) : project ? (
               <div className="course-project">
-                <p className="course-project-name">{project.title}</p>
-                <p className="course-project-line">
-                  {project.category} | {project.place}
+                <p className="course-project-name">
+                  {project.title} – {project.category} | {project.place}
                 </p>
                 <p className="course-project-meta">
-                  {course.title} | {project.time}
+                  {course.code}: {course.title} | {project.time}
+                  {project.team ? ` | ${project.team}` : ''}
                 </p>
                 <ul>
                   {project.points.map((point) => (
